@@ -1,4 +1,49 @@
-<!doctype html><meta charset="utf-8"><title>TeleBot privacy</title>
-<h1>Privacy policy</h1>
-<p>TeleBot is a personal tool used only by its owner. It reads YouTube and YouTube Analytics data (read-only) for the owner's channel and stores it on the owner's own computer. No data is sold, shared or sent to third parties. Access can be revoked at any time at https://myaccount.google.com/permissions.</p>
-<p>Contact: &lt;maiducthang0909@gmail.com&gt;</p>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TeleBot privacy policy</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 16px; line-height: 1.55; color: #1f2328; background: #fff; }
+  h1 { font-size: 1.6rem; } h2 { font-size: 1.15rem; margin-top: 1.8rem; }
+  code { background: #f2f2f2; padding: 0 4px; border-radius: 3px; }
+</style>
+</head>
+<body>
+<h1>TeleBot privacy policy</h1>
+<p><em>Last updated: 2026-10-09</em></p>
+
+<p>TeleBot is a private Telegram bot run by one YouTube creator (the "owner") on the owner's own computer. It is not offered to the public: only Telegram chats on the owner's allow-list can use it. TeleBot uses YouTube API Services. By using TeleBot you agree to this policy, to the
+<a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and to the
+<a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+<h2>What data TeleBot accesses</h2>
+<ul>
+  <li><strong>Public YouTube data</strong> through the YouTube Data API v3 with an API key: video and channel metadata and statistics (titles, tags, categories, durations, view/like/comment counts, subscriber counts), search results, most-popular charts and video categories. Top public comments of a few popular videos are read to find topics viewers ask for; comment text is not stored.</li>
+  <li><strong>The owner's own channel data</strong> through YouTube Analytics with the owner's OAuth consent (read-only scopes <code>youtube.readonly</code>, <code>yt-analytics.readonly</code>, <code>yt-analytics-monetary.readonly</code>): daily views, watch time, average view duration, subscribers gained, views and estimated revenue by country, and search terms that led viewers to the owner's videos.</li>
+</ul>
+
+<h2>How the data is used</h2>
+<p>Only to produce private research reports for the owner in Telegram: trending videos and niches, keyword ideas, and the performance of the owner's own videos. TeleBot does not show ads, does not sell data and does not build profiles of YouTube users.</p>
+
+<h2>Sharing</h2>
+<p>To write summaries, TeleBot sends public video titles, tags, short excerpts and the public comments mentioned above, plus aggregated numbers from the owner's analytics for the owner's monthly report, to a large-language-model API (OpenRouter, <a href="https://openrouter.ai/privacy">privacy policy</a>). Reports are delivered to the owner's chats through Telegram (<a href="https://telegram.org/privacy">privacy policy</a>). No other data is shared with third parties.</p>
+
+<h2>Storage and retention</h2>
+<ul>
+  <li>Data is stored in a local database on the owner's computer.</li>
+  <li>Public YouTube API data is deleted or refreshed within <strong>30 days</strong>. A daily job removes older records; only derived scores (for example a 0–1 opportunity score) are kept longer.</li>
+  <li>The owner's analytics data is kept while the owner's authorization is active.</li>
+</ul>
+
+<h2>Revoking access and deletion</h2>
+<ul>
+  <li>The owner can revoke TeleBot's access at <a href="https://myaccount.google.com/permissions">Google Account permissions</a>. TeleBot detects the revocation at its next daily run and deletes the stored analytics data 7 days later.</li>
+  <li>Running <code>python -m telebot auth youtube --revoke</code> revokes the token and deletes the stored analytics data immediately.</li>
+</ul>
+
+<h2>Contact</h2>
+<p>maiducthang0909@gmail.com</p>
+</body>
+</html>
